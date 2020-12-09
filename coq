@@ -1,16 +1,4 @@
 
-Inductive Var := a | b | c | x | y | z | n | s | i .
-
-Scheme Equality for Var.
-
-Inductive AExp :=
-| avar : Var -> AExp
-| anum : nat -> AExp
-| aplus : AExp -> AExp -> AExp
-| amul : AExp -> AExp -> AExp
-| aminus : AExp -> AExp -> AExp
-| adiv : AExp -> AExp -> AExp
-| amod : AExp -> AExp -> AExp.
 
 Coercion anum : nat >-> AExp.
 Coercion avar : Var >->AExp.
